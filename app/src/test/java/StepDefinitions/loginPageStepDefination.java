@@ -63,4 +63,14 @@ public class loginPageStepDefination {
     public void iShouldSeeAnErrorMessageIndicating(String errorMessage) {
         Assert.assertTrue(driver.findElement(By.xpath("//*[contains(text(),'Enter your userName and password correct')]")).isDisplayed());
     }
+
+    @When("I click on Register link")
+    public void iClickOnRegisterLink() {
+        loginPage.clickRegisterButton();
+    }
+
+    @Then("I should be redirected to the user registration page")
+    public void iShouldBeRedirectedToTheUserRegistrationPage() {
+        Assert.assertTrue(driver.findElement(By.xpath("//*[contains(text(),'To create your account')]")).isDisplayed());
+    }
 }

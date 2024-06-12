@@ -25,3 +25,7 @@ Feature: Login Functionality of demo Website
       | username            | password  | error_message              |
       | 8464853483          | abAB@1211 | Your password is incorrect |
       | testuser2@email.com | test2     | Your password is incorrect |
+
+    Scenario: Navigating to the Register User page
+      When I click on Register link
+      Then I should be redirected to the user registration page

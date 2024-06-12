@@ -11,6 +11,7 @@ public class LoginPage {
     private By emailInputLocator = By.xpath("//input[@name='userName']");
     private By passwordInputLocator = By.xpath("//input[@name='password']");
     private By loginButtonLocator = By.xpath("//input[@name='submit']");
+    private By registerButtonLocator = By.xpath("//a[@href='register.php']");
 
     //Constructor
     public LoginPage(WebDriver driver) {
@@ -31,5 +32,10 @@ public class LoginPage {
     public void clickLoginButton() {
         WebElement loginButton = driver.findElement(loginButtonLocator);
         loginButton.click();
+    }
+
+    public void clickRegisterButton() {
+        WebElement registerButton = driver.findElement(registerButtonLocator);
+        registerButton.click();
     }
 }
