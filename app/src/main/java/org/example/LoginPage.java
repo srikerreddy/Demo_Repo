@@ -8,10 +8,10 @@ public class LoginPage {
     private WebDriver driver;
 
     // By Locators
-    private By emailInputLocator = By.xpath("//input[@name='userName']");
+    private By emailInputLocator = By.xpath("//input[@name='username']");
     private By passwordInputLocator = By.xpath("//input[@name='password']");
-    private By loginButtonLocator = By.xpath("//input[@name='submit']");
-    private By registerButtonLocator = By.xpath("//a[@href='register.php']");
+    private By loginButtonLocator = By.xpath("//input[@class='button']");
+    private By registerButtonLocator = By.xpath("//a[@href='register.htm']");
 
     //Constructor
     public LoginPage(WebDriver driver) {
